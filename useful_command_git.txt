@@ -153,3 +153,22 @@ vim editor
 edit by pressing i then type
 then by pressing esc + : +wq (:wq) enter
 $ git log -p -1
+
+## Lec12: Unstaging and Unmodifying files in git
+
+# for Unstaging first change first_renamed.txt
+
+$ git add first_renamed.txt
+$ git status
+$ git restore --staged first_renamed.txt
+$ git status
+
+# for unmodifying files
+
+# case in which you remove the content from first_renamed.txt and only save
+
+$ git status
+$ git checkout -- first_renamed.txt
+
+# Case one or more files are there then you use 
+$ git checkout -f

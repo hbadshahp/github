@@ -1,0 +1,155 @@
+# status check karne ke liye
+
+lenovo@LAPTOP-D8PP3RPT MINGW64 ~/Desktop/Code playground/Tuts/Git tutorials
+$ git status
+fatal: not a git repository (or any of the parent directories): .git
+
+# folder ko git repository banane ke liye
+
+lenovo@LAPTOP-D8PP3RPT MINGW64 ~/Desktop/Code playground/Tuts/Git tutorials
+$ git init
+Initialized empty Git repository in C:/Users/lenovo/Desktop/Code playground/Tuts/Git tutorials/.git/
+
+# all files ko working area se stage area me lejana he
+lenovo@LAPTOP-D8PP3RPT MINGW64 ~/Desktop/Code playground/Tuts/Git tutorials (master)
+$ git add --a
+lenovo@LAPTOP-D8PP3RPT MINGW64 ~/Desktop/Code playground/Tuts/Git tutorials (master)
+$ git add .
+# for single file
+$ git add first.txt
+
+# stage area se git repository me commit karne ke liye ye command use karenge
+
+lenovo@LAPTOP-D8PP3RPT MINGW64 ~/Desktop/Code playground/Tuts/Git tutorials (master)
+$ git commit -m "intial commit"
+[master (root-commit) 036c9fc] intial commit
+ 3 files changed, 1 insertion(+)
+ create mode 100644 Word.docx
+ create mode 100644 first.txt
+ create mode 100644 images.bmp
+
+# Log dekhne ke liye
+lenovo@LAPTOP-D8PP3RPT MINGW64 ~/Desktop/Code playground/Tuts/Git tutorials (master)
+$ git log
+commit 036c9fc1262ddc141d848698895f9b648bf2857c (HEAD -> master)
+Author: Badshah <hbadshahph@gmail.com>
+Date:   Wed Feb 1 08:07:26 2023 +0530
+
+    intial commit
+
+# git repositry ko hatane ke liye
+
+lenovo@LAPTOP-D8PP3RPT MINGW64 ~/Desktop/Code playground/Tuts/Git tutorials (master)
+$ rm -rf .git
+
+lenovo@LAPTOP-D8PP3RPT MINGW64 ~/Desktop/Code playground/Tuts/Git tutorials
+$ git status
+fatal: not a git repository (or any of the parent directories): .git
+
+# to download repositary from github
+
+lenovo@LAPTOP-D8PP3RPT MINGW64 ~/Desktop/Code playground/Tuts/Git tutorials
+$ git clone https://github.com/tensorflow/tensorflow.git
+
+# generate file error.log with git bash terminal
+
+lenovo@LAPTOP-D8PP3RPT MINGW64 ~/Desktop/Code playground/Tuts/Git tutorials (master)
+$ touch error.log
+$ touch .gitignore
+write error.log in .gitignore notepad file and save. Run fit status
+if there are many copies of .log files then
+write *.log in .gitignore notepad file and save. Run fit status
+write dir/ in .gitignore notepad file and save to ignore the dir directory. Run fit status
+
+Made static folder and then made another dir folder and add txt file 
+git status
+
+add txt file in static folder and now see the git status
+
+if inside dir we have to track
+add /dir/ in .gitignore file
+add static/dir to ignore
+
+# git diff compare working directory with staging area
+# git diff --staged compare commit with staging area
+
+lenovo@LAPTOP-D8PP3RPT MINGW64 ~/Desktop/Code playground/Tuts/Git tutorials (master)
+$ git diff
+
+lenovo@LAPTOP-D8PP3RPT MINGW64 ~/Desktop/Code playground/Tuts/Git tutorials (master)
+$ git diff --staged
+
+
+
+lec9 : sikipping staging area
+
+Direct commit the file skipping staging area but untracked file does not direct commit 
+
+lenovo@LAPTOP-D8PP3RPT MINGW64 ~/Desktop/Code playground/Tuts/Git tutorials (master)
+$ git commit -a -m "Direct commit"
+
+for untracked file you have to first add in staging area
+git add second.txt
+git commit -m "second commit"
+git log
+q
+
+Lec10: moving and renaming file in git
+
+# for delete file in git
+lenovo@LAPTOP-D8PP3RPT MINGW64 ~/Desktop/Code playground/Tuts/Git tutorials (master)
+$ git rm third.txt
+lenovo@LAPTOP-D8PP3RPT MINGW64 ~/Desktop/Code playground/Tuts/Git tutorials (master)
+$ git commit -m "removed bad file third.txt"
+
+
+# for ranaming file in git
+lenovo@LAPTOP-D8PP3RPT MINGW64 ~/Desktop/Code playground/Tuts/Git tutorials (master)
+$ git mv first.txt first_renamed.txt
+lenovo@LAPTOP-D8PP3RPT MINGW64 ~/Desktop/Code playground/Tuts/Git tutorials (master)
+$ git commit -m "rename"
+
+# if tracked file is added in gitignore you have to untrack it otherwise git will follow
+lenovo@LAPTOP-D8PP3RPT MINGW64 ~/Desktop/Code playground/Tuts/Git tutorials (master)
+$ git rm --cached Word.docx
+lenovo@LAPTOP-D8PP3RPT MINGW64 ~/Desktop/Code playground/Tuts/Git tutorials (master)
+$ git commit -m "removed word.docx"
+
+Lec11:viewing and changing commits in git
+
+# git reposatorty ko hatane ke liye
+lenovo@LAPTOP-D8PP3RPT MINGW64 ~/Desktop/Code playground/Tuts/Git tutorials (master)
+$ rm -rf .git
+$ git clone url
+# to see the commit
+$ git log 
+# to see commit with difference
+$ git log -p
+# to see one 3 commit with diggerence
+$ git log -p -3
+# short summary of commit
+$ git log --stat
+# commit in one line
+$ git log --pretty=oneline
+$ git log --pretty=short
+$ git log --pretty=full
+# Time ke hisab se filter lagana
+$ git log --since=2.days
+$ git log --since=2.weeks
+$ git log --since=2.months
+$ git log --since=2.years
+# pretty formate > git scm useful document for git log
+lenovo@LAPTOP-D8PP3RPT MINGW64 ~/Desktop/Code playground/Tuts/Git tutorials/mypandas (main)
+$ git log --pretty=format:"%h -- %an"
+
+# if we want to add commit in previous commit
+$ git log -p -1
+q
+
+change in author.md file
+$ git add .
+$ git commit --amend
+vim editor 
+edit by pressing i then type
+then by pressing esc + : +wq (:wq) enter
+$ git log -p -1

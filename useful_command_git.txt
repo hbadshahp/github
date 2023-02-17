@@ -172,3 +172,27 @@ $ git checkout -- first_renamed.txt
 
 # Case one or more files are there then you use 
 $ git checkout -f
+
+## Lec13: Working wih remote repositories
+
+$ git remote
+$ git remote add origin url
+$ git remote
+$ git remote -v
+$ git push -u origin master
+
+# if permession issue came you have to make SSH key 
+google search SSH keys github >
+$ ssh-keygen -t rsa -b 4096 -C "your_email@example.com" 
+start the ssh-agent in the background
+$ eval "$(ssh-agent -s)"
+$ ssh-add ~/.ssh/id_ed25519
+$ tail ~/.ssh/id_ed25519.pub
+setting > SSH keys > New SSH key
+google search SSH keys github > paste the ssh key
+
+$ git push -u origin master
+
+
+
+

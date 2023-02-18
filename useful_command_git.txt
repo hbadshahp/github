@@ -1,26 +1,26 @@
+shift + right click > git bash
+
 # status check karne ke liye
 
-lenovo@LAPTOP-D8PP3RPT MINGW64 ~/Desktop/Code playground/Tuts/Git tutorials
 $ git status
 fatal: not a git repository (or any of the parent directories): .git
 
 # folder ko git repository banane ke liye
 
-lenovo@LAPTOP-D8PP3RPT MINGW64 ~/Desktop/Code playground/Tuts/Git tutorials
 $ git init
 Initialized empty Git repository in C:/Users/lenovo/Desktop/Code playground/Tuts/Git tutorials/.git/
 
 # all files ko working area se stage area me lejana he
-lenovo@LAPTOP-D8PP3RPT MINGW64 ~/Desktop/Code playground/Tuts/Git tutorials (master)
+
 $ git add --a
-lenovo@LAPTOP-D8PP3RPT MINGW64 ~/Desktop/Code playground/Tuts/Git tutorials (master)
+
 $ git add .
 # for single file
 $ git add first.txt
 
 # stage area se git repository me commit karne ke liye ye command use karenge
 
-lenovo@LAPTOP-D8PP3RPT MINGW64 ~/Desktop/Code playground/Tuts/Git tutorials (master)
+
 $ git commit -m "intial commit"
 [master (root-commit) 036c9fc] intial commit
  3 files changed, 1 insertion(+)
@@ -29,7 +29,7 @@ $ git commit -m "intial commit"
  create mode 100644 images.bmp
 
 # Log dekhne ke liye
-lenovo@LAPTOP-D8PP3RPT MINGW64 ~/Desktop/Code playground/Tuts/Git tutorials (master)
+
 $ git log
 commit 036c9fc1262ddc141d848698895f9b648bf2857c (HEAD -> master)
 Author: Badshah <hbadshahph@gmail.com>
@@ -56,10 +56,10 @@ $ git clone https://github.com/tensorflow/tensorflow.git
 lenovo@LAPTOP-D8PP3RPT MINGW64 ~/Desktop/Code playground/Tuts/Git tutorials (master)
 $ touch error.log
 $ touch .gitignore
-write error.log in .gitignore notepad file and save. Run fit status
+write error.log in .gitignore notepad file and save. Run git status
 if there are many copies of .log files then
-write *.log in .gitignore notepad file and save. Run fit status
-write dir/ in .gitignore notepad file and save to ignore the dir directory. Run fit status
+write *.log in .gitignore notepad file and save. Run git status
+write dir/ in .gitignore notepad file and save to ignore the dir directory. Run git status
 
 Made static folder and then made another dir folder and add txt file 
 git status
@@ -192,6 +192,9 @@ setting > SSH keys > New SSH key
 google search SSH keys github > paste the ssh key
 
 $ git push -u origin master
+
+# Setting alias in git
+
 
 
 

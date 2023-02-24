@@ -197,6 +197,16 @@ $ git push -u origin master
 
 # Git: Creaitng & Switching Branches
 
+# making new develop branch and switching on it
+$ git checkout -b develop
+# make changes and now switch to master
+$ git checkout master
+# git branch 
+# Again want to switch on develop
+$ git checkout develop
+# you cannot directly push branch on git
+
+
 
 
 

@@ -205,6 +205,13 @@ $ git checkout master
 # Again want to switch on develop
 $ git checkout develop
 # you cannot directly push branch on git
+# for merging branch with master
+$ git merge tryCleanup
+# accept the incoming change from the visiual studio
+# git add .
+# git commit
+# vim editor will open then Esc > :wq +enter
+
 
 
 
